@@ -32,6 +32,7 @@ function onSearchResult(data){
 
 	var html = Mustache.render(listTemplate, data);
 	listDiv.innerHTML = html;
+console.log(listDiv);
 
 	//Create variable for the list resulted from the search
 	var items = listDiv.getElementsByTagName("a");
