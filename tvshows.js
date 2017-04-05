@@ -20,6 +20,7 @@ searchBtn.addEventListener("click", function () {
 //Create done event handling function
 function onSearchResult(data){
 
+
 	//Create variables for looping through the objects in the data array
 	var i,
 			x = "";
@@ -40,15 +41,10 @@ function onSearchResult(data){
 	for(i in data) {
 		x += "<li><a id=" + data[i].show.id + " href=\"#\">" + data[i].show.name + "</a></li>";
 	}
-	console.log(x);
-	//listDiv.innerHTML = x;
-
-
-
-	var html = Mustache.render(listTemplate, x);
+	
+	/* I can't make this work like the movie database api */
+	//var html = Mustache.render(listTemplate, data);
 	listDiv.innerHTML = x;
-	//console.log(listDiv);
-
 
 	//Create variable for the list resulted from the search
 	var items = listDiv.getElementsByTagName("a");
@@ -77,4 +73,14 @@ function getDetails(event) {
 function onDetailResult(data) {
 	var html = Mustache.render(detailsTemplate, data);
 	detailsDiv.innerHTML = html;
+
+	/* Fix the html tags that comes with the data from api.tvmaze.com */
+	var plotBody = document.getElementById("plot");
+	var plotTxt = plotBody.nextElementSibling.textContent;
+	var regex = /(<([^>]+)>)/ig,   
+			result = plotTxt.replace(regex, "");
+
+  plotBody.nextElementSibling.innerHTML = result;
+  
 }
+

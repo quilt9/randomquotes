@@ -13,12 +13,11 @@
 	</script>
 	<!--Make second display template-->
 	<script type="text/x-tmpl-mustache" id="details_template">
-	<h2>{{show.name}} ({{language}})</h2>
+	<h2>{{name}} ({{language}})&nbsp;&nbsp;&nbsp;<span class="subhead">Country: {{network.country.name}}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;First Episode Date: {{premiered}}<span></h2>
 	<hr>
-	<h3>Country: {{country.code}}</h3><!--Added by Helen 04/04-->
-	<h3>First Episode Date: {{premiered}}</h3><!--Added by Helen 04/04-->
 	<h3>Genre: {{genres}}</h3>
-	<img id="poster" src="{{medium}}">
+	<h3>imdb: {{externals.imdb}}</h3>
+	<img id="poster" src="{{image.medium}}">
 	<h3 id="plot">Summary</h3>
 	<div>{{summary}}</div>
 	</script>
