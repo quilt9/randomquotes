@@ -12,7 +12,7 @@ searchBtn.addEventListener("click", function () {
 	//Get the search input the user enter
 	var title = searchText.value;
 	//Make the first server call
-	$.get("https://api.tvmaze.com/search/shows?q=:query"+ title, null, null, "json")
+	$.get("https://api.tvmaze.com/search/shows?q=:"+ title, null, null, "json")
 		.done(onSearchResult)//Call done event handling function
 		.fail(onSearchFail);//Call fail event handling function
 });
