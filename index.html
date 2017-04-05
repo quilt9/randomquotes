@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="tvshows.css">
+	<meta charset="utf-8">
+	<title>TV Shows Search</title>
+	<!--Make first clickable template-->
+	<script type="text/x-tmpl-mustache" id="list_template">
+		<ul>
+			{{#Search}}
+			<li><a id="{{imdb}}" href="#">{{show.name}}</a></li>
+			{{/Search}}
+		</ul>
+	</script>
+	<!--Make second display template-->
+	<script type="text/x-tmpl-mustache" id="details_template">
+	<h2>{{show.name}} ({{language}})</h2>
+	<hr>
+	<h3>Country: {{country.code}}</h3><!--Added by Helen 04/04-->
+	<h3>First Episode Date: {{premiered}}</h3><!--Added by Helen 04/04-->
+	<h3>Genre: {{genres}}</h3>
+	<img id="poster" src="{{medium}}">
+	<h3 id="plot">Summary</h3>
+	<div>{{summary}}</div>
+	</script>
+
+</head>
+<body>
+	<div id="search">
+		<label>TV Show:</label> <input id="search_text" type="text">
+		<button id="search_button">Search</button>
+	</div>
+	<div id="error"></div><!--Added by Helen 04/04-->
+	<div id="list"></div>
+	<div id="details"></div>
+
+	<script type="text/javascript" src="mustache.js"></script>
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="tvshows.js"></script>
+</body>
+</html>
