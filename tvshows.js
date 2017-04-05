@@ -19,21 +19,36 @@ searchBtn.addEventListener("click", function () {
 
 //Create done event handling function
 function onSearchResult(data){
+
+	var i,
+			j,
+			x = "";
+
+	//var dataKey = Object.keys(data);
+	//var itemKey = Object.keys(dataKey);
+	//data = JSON.stringify(data);
+	//console.log(Object.prototype.toString.call(data));
 	console.log(data);
-/*
-	if(data.hasOwnProperty("Error")) {
-		errorText.innerHTML = "Movie not found!<br>Please enter another search.";
-	} else if (errorText.innerHTML != " ") {
-		errorText.innerHTML = " ";
+
+
+	for(i in data) {
+		x += "<li><a id=" + data[i].show.id + " href=\"#\">" + data[i].show.name + "</a></li>";
 	}
-*/
+	console.log(x);
+	listDiv.innerHTML = x;
+
 /*Validate the returned result. If error occurs, display a message*/
 //console.log(data.hasOwnProperty("error"));
 
+/*
 	var html = Mustache.render(listTemplate, data);
-	listDiv.innerHTML = html;
-console.log(listDiv);
+	if(html != "") {
+		console.log("Crazy!");
+	}
+	listDiv.innerHTML = x;
+	console.log(listDiv);
 
+*/
 	//Create variable for the list resulted from the search
 	var items = listDiv.getElementsByTagName("a");
 	//Loop through every single item in the list
