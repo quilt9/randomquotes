@@ -1,6 +1,9 @@
-# jsfyelpapi
+# Build a Random Quote Machine - FCC
+### by Helen Shiu
 
-JAVASCRIPT FOUNDATIONS
-Lesson 5 – Server Communication Assignment
+## Intermediate Front End Development Projects
+### Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/FreeCodeCamp/full/ONjoLe/.
+### User Stories: 1. I can click a button to show me a new random quote. 2. I can press a button to tweet out a quote.
 
-Find another open web service, research it to learn the service address, parameters and response type. Use jQuery’s get method to make a call to that service and get back a result.
+Fulfill the user stories. Use whichever libraries or APIs you need. Give it your own personal style.
+When you are finished, click the "I've completed this challenge" button and include a link to your CodePen.
