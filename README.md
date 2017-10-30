@@ -7,3 +7,6 @@
 
 Fulfill the user stories. Use whichever libraries or APIs you need. Give it your own personal style.
 When you are finished, click the "I've completed this challenge" button and include a link to your CodePen.
+
+# NOTE
+### Using 3D Transforms which are not supported in older browsers.
